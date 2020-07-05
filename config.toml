@@ -1,9 +1,7 @@
-baseURL = "https://benhoyt.github.io/lwntest/"
+baseURL = "https://example.com"
 languageCode = "en-us"
 title = "LWN Test"
 theme = "soho"
-
-publishDir = "docs"
 
 [params]
 author = "Ben Hoyt"
