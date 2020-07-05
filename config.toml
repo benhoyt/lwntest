@@ -1,0 +1,31 @@
+baseURL = "https://benhoyt.github.io/lwntest/"
+languageCode = "en-us"
+title = "LWN Test"
+theme = "soho"
+
+publishDir = "docs"
+
+[params]
+author = "Ben Hoyt"
+description = "Test of Hugo for LWN.net"
+
+profilePicture = "images/unicycling-glory.jpg"
+
+copyright = "Ben Hoyt"
+
+customCss = ["css/overrides.css"]
+
+
+  [[params.socialIcons]]
+  icon = "fa-github"
+  title = "GitHub"
+  url = "https://github.com/benhoyt/lwntest"
+
+
+[menu]
+
+  [[menu.main]]
+  name = "About"
+  identifier = "about"
+  weight = 300
+  url = "/about/"

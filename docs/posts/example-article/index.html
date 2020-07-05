@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us">
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="generator" content="Hugo 0.73.0" />
+
+  <title>Example Article (tech) &middot; LWN Test</title>
+
+  <meta name="description" content="" />
+
+  
+
+<meta itemprop="name" content="Example Article (tech)">
+<meta itemprop="description" content="A few years ago I learned Go by porting the server for my Gifty Weddings side gig from Python to Go. It was a fun way to learn the language, and took me about &ldquo;two weeks of bus commutes&rdquo; to learn Go at a basic level and port the code.
+Since then, I&rsquo;ve really enjoyed working with the language, and have used it extensively at work as well as on side projects like GoAWK and zztgo. Go usage at Compass.com, my current workplace, has grown significantly in the time I&rsquo;ve been there &ndash; around half of our 200 plus services are written in Go.
+This article describes what I think are some of the great things about Go, gives a very brief overview of the standard library, and then digs into the core language. But if you just want a feel for what real Go code looks like, skip to the HTTP server examples.">
+<meta itemprop="datePublished" content="2020-07-06T09:49:54&#43;12:00" />
+<meta itemprop="dateModified" content="2020-07-06T09:49:54&#43;12:00" />
+<meta itemprop="wordCount" content="862">
+
+
+
+<meta itemprop="keywords" content="" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Example Article (tech)"/>
+<meta name="twitter:description" content="A few years ago I learned Go by porting the server for my Gifty Weddings side gig from Python to Go. It was a fun way to learn the language, and took me about &ldquo;two weeks of bus commutes&rdquo; to learn Go at a basic level and port the code.
+Since then, I&rsquo;ve really enjoyed working with the language, and have used it extensively at work as well as on side projects like GoAWK and zztgo. Go usage at Compass.com, my current workplace, has grown significantly in the time I&rsquo;ve been there &ndash; around half of our 200 plus services are written in Go.
+This article describes what I think are some of the great things about Go, gives a very brief overview of the standard library, and then digs into the core language. But if you just want a feel for what real Go code looks like, skip to the HTTP server examples."/>
+
+
+<meta property="og:title" content="Example Article (tech)" />
+<meta property="og:description" content="A few years ago I learned Go by porting the server for my Gifty Weddings side gig from Python to Go. It was a fun way to learn the language, and took me about &ldquo;two weeks of bus commutes&rdquo; to learn Go at a basic level and port the code.
+Since then, I&rsquo;ve really enjoyed working with the language, and have used it extensively at work as well as on side projects like GoAWK and zztgo. Go usage at Compass.com, my current workplace, has grown significantly in the time I&rsquo;ve been there &ndash; around half of our 200 plus services are written in Go.
+This article describes what I think are some of the great things about Go, gives a very brief overview of the standard library, and then digs into the core language. But if you just want a feel for what real Go code looks like, skip to the HTTP server examples." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://benhoyt.github.io/lwntest/posts/example-article/" />
+<meta property="article:published_time" content="2020-07-06T09:49:54+12:00" />
+<meta property="article:modified_time" content="2020-07-06T09:49:54+12:00" />
+
+
+
+  <link type="text/css"
+        rel="stylesheet"
+        href="/lwntest/css/print.css"
+        media="print">
+
+  <link type="text/css"
+        rel="stylesheet"
+        href="/lwntest/css/poole.css">
+
+  <link type="text/css"
+        rel="stylesheet"
+        href="/lwntest/css/hyde.css">
+
+  
+
+
+  <link type="text/css" rel="stylesheet" href="/lwntest/css/overrides.css">
+
+  <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700&display=swap">
+
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css"
+        integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk="
+        crossorigin="anonymous" />
+
+  <link rel="apple-touch-icon-precomposed"
+        sizes="144x144"
+        href="/apple-touch-icon-144-precomposed.png">
+
+  <link rel="shortcut icon" href="/favicon.png">
+
+  
+  </head>
+<body>
+  <aside class="sidebar">
+  <div class="container">
+    <div class="sidebar-about">
+      
+        
+        <div class="author-image">
+          <img src="/lwntest/images/unicycling-glory.jpg" class="img-circle img-headshot center" alt="Profile Picture">
+        </div>
+        
+      
+
+      <h1>LWN Test</h1>
+
+      
+      <p class="lead">Test of Hugo for LWN.net</p>
+      
+    </div>
+
+    <nav>
+      <ul class="sidebar-nav">
+        <li>
+          <a href="https://benhoyt.github.io/lwntest/">Home</a>
+        </li>
+        <li>
+          <a href="/lwntest/about/">About</a>
+        </li>
+      </ul>
+    </nav>
+
+    <section class="social-icons">
+      
+      <a href="https://github.com/benhoyt/lwntest" rel="me" title="GitHub" target="_blank">
+        <i class="fab fa-github" aria-hidden="true"></i>
+      </a>
+      
+    </section>
+  </div>
+</aside>
+
+
+  <main class="content container">
+  <div class="post">
+  <h1>Example Article (tech)</h1>
+
+  <div class="post-date">
+    <time datetime="2020-07-06T09:49:54&#43;1200">Jul 6, 2020</time> &middot; 5 min read
+  </div>
+
+  <p>A few years ago I <a href="https://benhoyt.com/writings/learning-go/">learned Go</a> by porting the server for my <a href="https://giftyweddings.com/">Gifty Weddings</a> side gig from Python to Go. It was a fun way to learn the language, and took me about &ldquo;two weeks of bus commutes&rdquo; to learn Go at a basic level and port the code.</p>
+<p>Since then, I&rsquo;ve really enjoyed working with the language, and have used it extensively at work as well as on side projects like <a href="/writings/goawk/">GoAWK</a> and <a href="/writings/zzt-in-go/">zztgo</a>. Go usage at <a href="https://www.compass.com/">Compass.com</a>, my current workplace, has grown significantly in the time I&rsquo;ve been there &ndash; around half of our 200 plus services are written in Go.</p>
+<p>This article describes what I think are some of the great things about Go, gives a very brief overview of the standard library, and then digs into the core language. But if you just want a feel for what real Go code looks like, skip to the <a href="#http-server-examples">HTTP server examples</a>.</p>
+<h2 id="why-go">Why Go?</h2>
+<p>As the following <a href="https://trends.google.com/trends/explore?date=2010-01-01%202020-06-09&amp;q=golang&amp;hl=en-US">Google Trends chart</a> shows, Go has become very popular over the past few years, partly because of the simplicity of the language, but perhaps more importantly because of the excellent tooling.</p>
+<p><img src="https://benhoyt.com/images/golang-trend.png" alt="Google Trends data for &ldquo;golang&rdquo; from 2010 to 2020"></p>
+<p>Here are some of the reasons I enjoy programming in Go (and why you might like it too):</p>
+<ul>
+<li><strong>Small and simple core language.</strong> Go feels similar in size to C, with a very readable <a href="https://golang.org/ref/spec">language spec</a> that&rsquo;s only about 50 pages long (compared to the <a href="https://docs.oracle.com/javase/specs/jls/se12/jls12.pdf">Java spec&rsquo;s</a> 770 pages). This makes it easy to learn or teach to others.</li>
+<li><strong>High quality standard library</strong>, especially for servers and network tasks. More details <a href="#the-standard-library">below</a>.</li>
+<li><strong>First class concurrency</strong> with <em>goroutines</em> (like threads, but lighter) and the <code>go</code> keyword to start a goroutine, <em>channels</em> for communicating between them, and a runtime whose scheduler coordinates all this.</li>
+<li><strong>Compiles to native code</strong>, producing easy-to-deploy binaries on all the major platforms.</li>
+<li><strong>Garbage collection</strong> that doesn&rsquo;t require knob-tweaking (<a href="https://blog.golang.org/ismmkeynote">optimized</a> for low latency).</li>
+<li><strong>Statically typed</strong>, but has type inference to avoid a lot of &ldquo;type stuttering&rdquo;.</li>
+<li><strong>Great documentation</strong> that is succinct and includes many runnable examples.</li>
+<li><strong>Excellent tooling.</strong> Just type <code>go build</code> to build your project, <code>go test</code> to find and run your tests, etc. There&rsquo;s CPU and memory profiling, code coverage, and cross compilation &ndash; all without external tooling.</li>
+<li><strong>Fast compile times.</strong> The language was designed from day one with fast compile times in mind. In fact, co-creator Rob Pike <a href="https://www.informit.com/articles/article.aspx?p=1623555">jokes</a> that &ldquo;Go was conceived while waiting for a big [C++] compilation.&rdquo;</li>
+<li><strong>Very stable</strong> language and library, with a strict <a href="https://golang.org/doc/go1compat">compatibility promise</a> that all Go 1 programs will run unchanged on later versions of Go 1.x.</li>
+<li><strong>Desired.</strong> According to StackOverflow&rsquo;s 2019 survey, it&rsquo;s the <a href="https://insights.stackoverflow.com/survey/2019#most-loved-dreaded-and-wanted">third most wanted</a> programming language, so it&rsquo;s easy to hire developers who want to use it.</li>
+<li><strong>Heavily used in cloud tools.</strong> Docker and Kubernetes are written in Go, and Dropbox, Digital Ocean, Cloudflare, and many other companies use it extensively.</li>
+</ul>
+<h2 id="the-standard-library">The standard library</h2>
+<p>Go&rsquo;s <a href="https://golang.org/pkg/">standard library</a> is extensive, cross-platform, and well documented. Similar to Python, Go comes with &ldquo;batteries included&rdquo;, so you can build useful servers and CLI tools right away, without any third party dependencies. Here are some of the highlights (biased towards what I&rsquo;ve used):</p>
+<ul>
+<li>Input/output: <a href="https://golang.org/pkg/os/">OS calls</a>, files and directories, <a href="https://golang.org/pkg/bufio/">buffered I/O</a>.</li>
+<li>HTTP: a production-ready <a href="https://golang.org/pkg/net/http/">client and server</a>, TLS, HTTP/2, simple routing, URL and cookie parsing.</li>
+<li>Strings: <a href="https://golang.org/pkg/strings/">all the basics</a>, handling of <a href="https://golang.org/pkg/bytes/">raw bytes</a>, <a href="https://golang.org/pkg/unicode/">unicode conversions</a>.</li>
+<li>Encodings: <a href="https://golang.org/pkg/encoding/json/">JSON</a>, <a href="https://golang.org/pkg/encoding/xml/">XML</a>, <a href="https://golang.org/pkg/encoding/csv/">CSV</a>, <a href="https://golang.org/pkg/encoding/base64/">base64</a>, <a href="https://golang.org/pkg/encoding/hex/">hex</a>, <a href="https://golang.org/pkg/encoding/binary/">binary</a>, more.</li>
+<li>Templating: simple but powerful <a href="https://golang.org/pkg/text/template/">text</a> and auto-escaped <a href="https://golang.org/pkg/html/template/">HTML</a> templates.</li>
+<li>Time: simple API but well thought out <a href="https://golang.org/pkg/time/">date and time</a> functions.</li>
+<li>Regular expressions: a non-backtracking <a href="https://golang.org/pkg/regexp/">regexp library</a>.</li>
+<li>Sorting: generic collection <a href="https://golang.org/pkg/sort/">sorting functions</a>.</li>
+<li>Databases: the <a href="https://golang.org/pkg/database/sql/"><code>database/sql</code></a> interface, with specific implementations left up to third party libraries.</li>
+<li>Crypto libraries: secure and fast <a href="https://golang.org/pkg/crypto/">implementations</a> of AES, block ciphers, cryptographic hashes, etc.</li>
+<li>Image: read and write <a href="https://golang.org/pkg/image/jpeg/">JPEG</a>, <a href="https://golang.org/pkg/image/png/">PNG</a>, and <a href="https://golang.org/pkg/image/gif/">GIF</a>, perform basic <a href="https://golang.org/pkg/image/draw/">compositing</a>.</li>
+<li>Big numbers: arbitrary-precision <a href="https://golang.org/pkg/math/big/">int and float</a>.</li>
+<li>Archives and compression: <a href="https://golang.org/pkg/archive/tar/">tar</a>, <a href="https://golang.org/pkg/archive/zip/">zip</a>, <a href="https://golang.org/pkg/compress/gzip/">gzip</a>, <a href="https://golang.org/pkg/compress/bzip2/">bzip2</a>, etc.</li>
+<li>Simple command-line <a href="https://golang.org/pkg/flag/">flag</a> library.</li>
+<li>Go source code tools: <a href="https://golang.org/pkg/go/parser/">parser</a>, <a href="https://golang.org/pkg/go/ast/">AST</a>, code <a href="https://golang.org/pkg/go/printer/">formatting</a>.</li>
+<li>Reflection: powerful run-time <a href="https://golang.org/pkg/reflect/">reflection support</a>.</li>
+</ul>
+<p>In terms of third party packages, typical Go philosophy is almost the opposite of JavaScript&rsquo;s approach of pulling in <code>npm</code> packages left, right, and center. Russ Cox (tech lead of the Go team at Google) talks about <a href="https://research.swtch.com/deps">our software dependency problem</a>, and Go co-creator Rob Pike <a href="https://go-proverbs.github.io/">likes to say</a>, &ldquo;A little copying is better than a little dependency.&rdquo; So it&rsquo;s fair to say that most Gophers are pretty conservative about using third party libraries.</p>
+<p>That said, since I originally wrote this talk, the Go team has designed and built <a href="https://blog.golang.org/using-go-modules">modules</a>, the Go team&rsquo;s official answer to how you should manage and version-pin your dependencies. I&rsquo;ve found it pleasant to use, and it works with all the normal <code>go</code> sub-commands.</p>
+<h2 id="language-features">Language features</h2>
+<p>So let&rsquo;s dig in to what Go itself looks like, and walk through the language proper.</p>
+<h3 id="hello-world">Hello world</h3>
+<p>Go has a C-like syntax, mandatory braces, and no semicolons (except in the formal grammar). Projects are structured via imports and packages &ndash; compilation units that consist of a directory with one or more <code>.go</code> files in it. Here&rsquo;s what a &ldquo;hello world&rdquo; looks like:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+
+<span style="color:#f92672">import</span> <span style="color:#e6db74">&#34;fmt&#34;</span>
+
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
+    <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#e6db74">&#34;Hello, world!&#34;</span>)
+}
+</code></pre></div><hr>
+<p><a href="https://benhoyt.com/writings/go-intro/">Read the real article here &hellip;</a></p>
+</div>
+
+
+  </main>
+
+  <footer>
+  <div>
+    &copy; Ben Hoyt 2020
+
+    
+
+    
+  </div>
+</footer>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/js/all.min.js"
+          integrity="sha256-MAgcygDRahs+F/Nk5Vz387whB4kSK9NXlDN3w58LLq0="
+          crossorigin="anonymous"></script>
+
+  
+
+  
+</body>
+</html>

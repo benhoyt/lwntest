@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>LWN Test</title>
+    <link>https://benhoyt.github.io/lwntest/</link>
+    <description>Recent content on LWN Test</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 06 Jul 2020 09:56:09 +1200</lastBuildDate>
+    
+	<atom:link href="https://benhoyt.github.io/lwntest/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>About</title>
+      <link>https://benhoyt.github.io/lwntest/about/</link>
+      <pubDate>Mon, 06 Jul 2020 10:09:09 +1200</pubDate>
+      
+      <guid>https://benhoyt.github.io/lwntest/about/</guid>
+      <description>This is a test site to try out the Hugo static site generator for my LWN.net article.</description>
+    </item>
+    
+    <item>
+      <title>Another Test Article (non-tech)</title>
+      <link>https://benhoyt.github.io/lwntest/posts/third-article/</link>
+      <pubDate>Mon, 06 Jul 2020 09:56:09 +1200</pubDate>
+      
+      <guid>https://benhoyt.github.io/lwntest/posts/third-article/</guid>
+      <description>&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;I just finished reading &lt;a href=&#34;https://www.amazon.com/Hillbilly-Elegy-Memoir-Family-Culture/dp/0062300547&#34;&gt;&lt;em&gt;Hillbilly Elegy&lt;/em&gt;&lt;/a&gt; by J. D. Vance, and can&amp;rsquo;t recommend it enough &amp;ndash; it definitely deserved to be a &lt;em&gt;New York Times&lt;/em&gt; bestseller. It&amp;rsquo;s a great yarn, but it was also eye-opening and provocative.&lt;/p&gt;
+&lt;p&gt;The book is an autobiographical account by Vance (who&amp;rsquo;s only 35) of his journey from a rough, rough upbringing in &lt;a href=&#34;https://en.wikipedia.org/wiki/Hillbilly&#34;&gt;hillbilly&lt;/a&gt; America to a university education ending with Yale Law School. I appreciated the empathetic writing style from the introduction, where he speaks of those he grew up around and identifies with: &amp;ldquo;Americans call them hillbillies, rednecks, or white trash. I call them neighbors, friends, and family.&amp;rdquo;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Example Article (tech)</title>
+      <link>https://benhoyt.github.io/lwntest/posts/example-article/</link>
+      <pubDate>Mon, 06 Jul 2020 09:49:54 +1200</pubDate>
+      
+      <guid>https://benhoyt.github.io/lwntest/posts/example-article/</guid>
+      <description>&lt;p&gt;A few years ago I &lt;a href=&#34;https://benhoyt.com/writings/learning-go/&#34;&gt;learned Go&lt;/a&gt; by porting the server for my &lt;a href=&#34;https://giftyweddings.com/&#34;&gt;Gifty Weddings&lt;/a&gt; side gig from Python to Go. It was a fun way to learn the language, and took me about &amp;ldquo;two weeks of bus commutes&amp;rdquo; to learn Go at a basic level and port the code.&lt;/p&gt;
+&lt;p&gt;Since then, I&amp;rsquo;ve really enjoyed working with the language, and have used it extensively at work as well as on side projects like &lt;a href=&#34;https://benhoyt.github.io/lwntest/writings/goawk/&#34;&gt;GoAWK&lt;/a&gt; and &lt;a href=&#34;https://benhoyt.github.io/lwntest/writings/zzt-in-go/&#34;&gt;zztgo&lt;/a&gt;. Go usage at &lt;a href=&#34;https://www.compass.com/&#34;&gt;Compass.com&lt;/a&gt;, my current workplace, has grown significantly in the time I&amp;rsquo;ve been there &amp;ndash; around half of our 200 plus services are written in Go.&lt;/p&gt;
+&lt;p&gt;This article describes what I think are some of the great things about Go, gives a very brief overview of the standard library, and then digs into the core language. But if you just want a feel for what real Go code looks like, skip to the &lt;a href=&#34;#http-server-examples&#34;&gt;HTTP server examples&lt;/a&gt;.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>First Post</title>
+      <link>https://benhoyt.github.io/lwntest/posts/my-first-post/</link>
+      <pubDate>Mon, 06 Jul 2020 09:33:48 +1200</pubDate>
+      
+      <guid>https://benhoyt.github.io/lwntest/posts/my-first-post/</guid>
+      <description>The quick brown fox jumps over the lazy dog. Ee equals em cee squared. Let&amp;rsquo;s try a link and some bold text.
+Another paragraph. Hugo seems to be working. Writing Markdown is nice.</description>
+    </item>
+    
+  </channel>
+</rss>

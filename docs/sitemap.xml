@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>https://benhoyt.github.io/lwntest/about/</loc>
+    <lastmod>2020-07-06T10:09:09+12:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://benhoyt.github.io/lwntest/posts/third-article/</loc>
+    <lastmod>2020-07-06T09:56:09+12:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://benhoyt.github.io/lwntest/</loc>
+    <lastmod>2020-07-06T09:56:09+12:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://benhoyt.github.io/lwntest/posts/</loc>
+    <lastmod>2020-07-06T09:56:09+12:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://benhoyt.github.io/lwntest/posts/example-article/</loc>
+    <lastmod>2020-07-06T09:49:54+12:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://benhoyt.github.io/lwntest/posts/my-first-post/</loc>
+    <lastmod>2020-07-06T09:33:48+12:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://benhoyt.github.io/lwntest/categories/</loc>
+  </url>
+  
+  <url>
+    <loc>https://benhoyt.github.io/lwntest/tags/</loc>
+  </url>
+  
+</urlset>
