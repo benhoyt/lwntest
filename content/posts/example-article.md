@@ -1,6 +1,8 @@
 ---
 title: "Example Article (tech)"
 date: 2020-07-06T09:49:54+12:00
+categories:
+- Development
 ---
 
 
